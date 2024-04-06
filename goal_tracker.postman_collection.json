@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "7de0b1a8-e53e-4aa1-a084-8325d9341ac6",
+		"name": "goal_tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30814853"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"example_user\",\r\n\t\"email\": \"example@example.com\",\r\n\t\"password\": \"password\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"example@example.com\",\r\n\t\"password\": \"password\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createGoals",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <YOUR_TOKEN>"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"goalName\": \"Example Goal\",\r\n\t\"minTimeline\": \"2024-04-05\",\r\n\t\"maxTimeline\": \"2024-04-30\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/goals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"goals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTasks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTBlNTQyYzBjZGM3YWJjMWZmMGZiYSIsImlhdCI6MTcxMjM4MzM0NCwiZXhwIjoxNzEyMzg2OTQ0fQ._Wu_rV-H1Rl2web5Y900QEelOR1-M-xFN-Rc0S54ZkM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"goalId\": \"6610e5d8c0cdc7abc1ff0fbd\",\r\n    \"taskName\": \"Example Task\",\r\n    \"quantity\": 1,\r\n    \"frequency\": \"weekly\",\r\n    \"daysOfWeek\": [\r\n        1,\r\n        3,\r\n        5\r\n    ],\r\n    \"reminders\": [\r\n        \"2024-04-05T08:00:00.000Z\",\r\n        \"2024-04-06T08:00:00.000Z\"\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userlogs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTBmZTA4MmQ3MDE0ZmIyN2ZiYmM4YyIsImlhdCI6MTcxMjM4OTY0NiwiZXhwIjoxNzEyMzkzMjQ2fQ.hQ9kdHkF7BvwKUHVzgcKCuxi7PGqWKZntKiDQrmUzjc"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"userId\": \"6610e542c0cdc7abc1ff0fba\",\r\n\t\"goalId\": \"6610e5d8c0cdc7abc1ff0fbd\",\r\n\t\"taskId\": \"6610e651c0cdc7abc1ff0fc0\",\r\n\t\"logDate\": \"2024-04-05\",\r\n\t\"quantityCompleted\": 1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/userlogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"userlogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dashboard",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MTBmZTA4MmQ3MDE0ZmIyN2ZiYmM4YyIsImlhdCI6MTcxMjM4OTY0NiwiZXhwIjoxNzEyMzkzMjQ2fQ.hQ9kdHkF7BvwKUHVzgcKCuxi7PGqWKZntKiDQrmUzjc"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/dashboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
