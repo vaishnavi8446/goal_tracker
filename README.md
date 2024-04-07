@@ -2,8 +2,7 @@
                                                                                   
 
 ## Introduction:
-The Goal Setting and Habit Tracking Module backend provides the server-side functionality for managing user accounts, goals, tasks, and user activity logs. This README file outlines the technical aspects of the backend, including database design, architecture, and key functionalities.
-
+The Goal Setting and Habit Tracking Module backend provides the server-side functionality for managing user accounts, goals, tasks, and user activity logs. 
 
 ## Technologies Used: 
   
