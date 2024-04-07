@@ -50,9 +50,14 @@ The backend utilizes a MongoDB database to store user data, goals, tasks, and us
             logDate (Date)
             quantityCompleted (Number)
 
-## Getting Started
+## Getting Started:
 
 Install dependencies => npm install
 
 Start the server => npm start
-            
+
+## Conclusion:
+
+The Goal Setting and Habit Tracking Module provides users with a comprehensive toolset to set, track, and achieve their goals and habits effectively. This technical design document serves as a guide for the development and implementation of the module, ensuring scalability, reliability, and maintainability throughout the development process.
+
+## Postman Collection is also included in the GitHub code base.
