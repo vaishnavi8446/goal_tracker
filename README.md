@@ -1,4 +1,4 @@
-                                                                                  ## Goal Setting and Habit Tracking Module - Backend
+## Goal Setting and Habit Tracking Module - Backend
                                                                                   
 
 ## Introduction:
@@ -50,4 +50,10 @@ The backend utilizes a MongoDB database to store user data, goals, tasks, and us
             taskId (ObjectID referencing Task)
             logDate (Date)
             quantityCompleted (Number)
+
+## Getting Started
+
+Install dependencies => npm install
+
+Start the server => npm start
             
