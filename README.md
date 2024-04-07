@@ -50,6 +50,14 @@ The backend utilizes a MongoDB database to store user data, goals, tasks, and us
             logDate (Date)
             quantityCompleted (Number)
 
+## Architecture:
+
+  The backend follows a RESTful architecture with Node.js and Express.js framework. Here's the architectural overview:
+
+  - Node.js with Express.js: Handles HTTP requests and responses, routing, middleware, and error handling.
+  - Mongoose: Serves as an Object Data Modeling (ODM) library for MongoDB, providing schema-based solutions and validation.
+  - JWT (JSON Web Tokens): Used for user authentication and authorization, generating and verifying tokens for secure access to protected routes.
+
 ## Getting Started:
 
 Install dependencies => npm install
